@@ -6,6 +6,7 @@ public class App {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
+        System.out.println("3 - Calc");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
         String numberGame = Cli.getInputText();
@@ -20,11 +21,15 @@ public class App {
             System.out.print("May I have your name? ");
             String name = Cli.getInputText();
             System.out.println("Hello, " + name);
-            EvenGame.beforeEvenGame(name);
+            System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+            Engine.controlGame(name, "2");
+        } else if ("3".equals(numberGame)) {
+            System.out.println("Welcome to the Brain Games!");
+            System.out.print("May I have your name? ");
+            String name = Cli.getInputText();
+            System.out.println("Hello, " + name);
+            System.out.print("What is the result of the expression?");
+            Engine.controlGame(name, "3");
         }
-    }
-
-    private static void startedMessage() {
-
     }
 }
