@@ -4,4 +4,6 @@
 
 ![](Nod.jpg)
 
-![](result.jpg)
+![](Progressive.jpg)
+
+![](Prime.jpg)

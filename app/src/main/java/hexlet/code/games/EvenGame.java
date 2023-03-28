@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Cli;
 
 public class EvenGame {
-    public static boolean startEvenGame(String name) {
+    public static boolean startGame(String name) {
         var firstValue = (int) (Math.random() * 100);
         var correctResult = firstValue % 2 == 0 ? "yes" : "no";
         System.out.println("Question: " + firstValue);

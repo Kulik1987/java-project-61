@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 
-public class Nod {
+public class NodGame {
     public static boolean startGame(String name) {
         var firstValue = (int) (Math.random() * 100);
         var secondValue = (int) (Math.random() * 100);

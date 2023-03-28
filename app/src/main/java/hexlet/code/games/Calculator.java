@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Cli;
 
 public class Calculator {
-    public static boolean getNumber(String name) {
+    public static boolean startGame(String name) {
         var firstValue = (int) (Math.random() * 100);
         var secondValue = (int) (Math.random() * 100);
         var operationType = (int) (Math.random() * 3);
