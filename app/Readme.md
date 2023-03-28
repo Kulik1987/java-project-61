@@ -2,6 +2,6 @@
 
 ![](calc.jpg)
 
-![](result.jpg)
+![](Nod.jpg)
 
 ![](result.jpg)
