@@ -6,7 +6,7 @@ public class ArithmeticProgressionGame {
     public static boolean startGame(String name) {
         int[] progressive = new int[10];
         progressive[0] =  (int) (Math.random() * 100);
-        var step =  (int) (Math.random() * 20);
+        var step =  (int) (Math.random() * 20) + 1;
         for (int i = 1; i < 10; i++) {
             progressive[i] = progressive[i - 1] + step;
         }
