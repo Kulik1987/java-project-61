@@ -10,7 +10,7 @@ public class ArithmeticProgressionGame {
         for (int i = 1; i < 10; i++) {
             progressive[i] = progressive[i - 1] + step;
         }
-        var findElement = (int) (Math.random() * 10);
+        var findElement = (int) (Math.random() * 9);
         System.out.print("Question: ");
         for (int i = 1; i < 10; i++) {
             if (findElement == i) {
