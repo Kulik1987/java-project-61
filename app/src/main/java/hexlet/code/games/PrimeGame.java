@@ -15,6 +15,7 @@ public class PrimeGame {
         var answer = Cli.getInputText();
         var result = isPrimeNumber(number);
         var textResult = result ? "no" : "yes";
+        System.out.println();
         if (answer.equals(textResult)) {
             System.out.println("Correct!");
             return true;
