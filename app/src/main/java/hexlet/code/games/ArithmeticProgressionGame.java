@@ -2,15 +2,17 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class ArithmeticProgressionGame {
     public static boolean startGame(String name) {
         int[] progressive = new int[10];
-        progressive[0] =  (int) (Math.random() * 100);
-        var step =  (int) (Math.random() * 20) + 1;
+        progressive[0] =  ThreadLocalRandom.current().nextInt(0, 101);
+        var step =  ThreadLocalRandom.current().nextInt(1, 21);
         for (int i = 1; i < 10; i++) {
             progressive[i] = progressive[i - 1] + step;
         }
-        var findElement = (int) (Math.random() * 9);
+        var findElement = ThreadLocalRandom.current().nextInt(0, 10);
         System.out.print("Question: ");
         for (int i = 1; i < 10; i++) {
             if (findElement == i) {
