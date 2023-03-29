@@ -46,7 +46,7 @@ public class App {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         String name = Cli.getInputText();
-        System.out.println("Hello, " + name);
+        System.out.println("Hello, " + name + "!");
         return name;
     }
 }
