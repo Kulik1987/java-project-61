@@ -22,6 +22,7 @@ public class ArithmeticProgressionGame {
         System.out.println("");
         System.out.print("Your answer: ");
         var answer = Cli.getInputText();
+        System.out.println("");
         if (Integer.parseInt(answer) == progressive[findElement]) {
             System.out.println("Correct!");
             return true;
