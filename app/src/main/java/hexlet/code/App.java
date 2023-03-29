@@ -44,8 +44,9 @@ public class App {
 
     private static String getBeforeGameMessage() {
         System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
+        System.out.print("May I have your name?");
         String name = Cli.getInputText();
+        System.out.println();
         System.out.println("Hello, " + name + "!");
         return name;
     }
