@@ -21,18 +21,18 @@ public class ArithmeticProgressionGame {
         for (int i = 1; i < SIZE_ARRAY; i++) {
             if (findElement == i && i != SIZE_ARRAY - 1) {
                 System.out.print(".. ");
-            } else if (findElement == i && i == SIZE_ARRAY - 1) {
+            } else if (findElement == i) {
                 System.out.print("..");
-            } else if (findElement != i && i == SIZE_ARRAY - 1) {
+            } else if (i == SIZE_ARRAY - 1) {
                 System.out.print(progressive[i]);
-            } else if (findElement != i && i != SIZE_ARRAY - 1) {
+            } else {
                 System.out.print(progressive[i] + " ");
             }
         }
         System.out.println();
         System.out.print("Your answer: ");
         var answer = Cli.getInputText();
-        System.out.println("");
+        System.out.println();
         if (Integer.parseInt(answer) == progressive[findElement]) {
             System.out.println("Correct!");
             return true;
