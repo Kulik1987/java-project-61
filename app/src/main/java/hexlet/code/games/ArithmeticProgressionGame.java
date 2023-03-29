@@ -15,8 +15,12 @@ public class ArithmeticProgressionGame {
         var findElement = ThreadLocalRandom.current().nextInt(0, 10);
         System.out.print("Question: ");
         for (int i = 1; i < 10; i++) {
-            if (findElement == i) {
+            if (findElement == i && i != 9) {
                 System.out.print(".. ");
+            } else if (findElement == i && i == 9) {
+                System.out.print("..");
+            } else if (findElement != i && i == 9) {
+                System.out.print(progressive[i]);
             } else {
                 System.out.print(progressive[i] + " ");
             }
