@@ -25,11 +25,11 @@ public class ArithmeticProgressionGame {
                 System.out.print("..");
             } else if (findElement != i && i == SIZE_ARRAY - 1) {
                 System.out.print(progressive[i]);
-            } else {
+            } else if (findElement != i && i != SIZE_ARRAY - 1) {
                 System.out.print(progressive[i] + " ");
             }
         }
-        System.out.println("");
+        System.out.println();
         System.out.print("Your answer: ");
         var answer = Cli.getInputText();
         System.out.println("");
