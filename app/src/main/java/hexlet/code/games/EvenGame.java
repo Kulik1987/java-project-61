@@ -15,7 +15,7 @@ public class EvenGame {
         } else {
             System.out.println("'" + response
                 + "' is wrong answer ;(. Correct answer was '" + correctResult + "'.");
-            System.out.println("Let's try again, " + name);
+            System.out.println("Let's try again, " + name + "!");
             return false;
         }
     }
