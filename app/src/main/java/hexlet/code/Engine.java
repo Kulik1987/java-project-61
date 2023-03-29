@@ -7,10 +7,13 @@ import hexlet.code.games.NodGame;
 import hexlet.code.games.PrimeGame;
 
 public class Engine {
+
+    public static final int MAX_COUNT_GAME = 3;
+
     public static void controlGame(String name, String typeGame) {
         var count = 0;
         boolean isTrueDecision = true;
-        while (count < 3 && isTrueDecision) {
+        while (count < MAX_COUNT_GAME && isTrueDecision) {
             if ("2".equals(typeGame)) {
                 isTrueDecision = EvenGame.startGame(name);
                 count++;
@@ -27,7 +30,7 @@ public class Engine {
                 isTrueDecision = PrimeGame.startGame(name);
                 count++;
             }
-            if (count == 3) {
+            if (count == MAX_COUNT_GAME) {
                 System.out.println("Congratulations, " + name + "!");
             }
         }

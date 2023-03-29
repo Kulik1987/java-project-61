@@ -2,10 +2,15 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class NodGame {
+
+    public static final int MAX_VALUE = 100;
+
     public static boolean startGame(String name) {
-        var firstValue = (int) (Math.random() * 100);
-        var secondValue = (int) (Math.random() * 100);
+        var firstValue = ThreadLocalRandom.current().nextInt(0, MAX_VALUE + 1);
+        var secondValue = ThreadLocalRandom.current().nextInt(0, MAX_VALUE + 1);
         System.out.println("Question: " + firstValue + " " + secondValue);
         System.out.print("Your answer: ");
         var answer = Cli.getInputText();

@@ -2,11 +2,17 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Calculator {
+
+    public static final int MAX_VALUE = 100;
+    public static final int TYPE_OPERATION = 2;
+
     public static boolean startGame(String name) {
-        var firstValue = (int) (Math.random() * 100);
-        var secondValue = (int) (Math.random() * 100);
-        var operationType = (int) (Math.random() * 3);
+        var firstValue =  ThreadLocalRandom.current().nextInt(0, MAX_VALUE + 1);
+        var secondValue =  ThreadLocalRandom.current().nextInt(0, MAX_VALUE + 1);
+        var operationType =  ThreadLocalRandom.current().nextInt(0, TYPE_OPERATION + 1);
         String operation;
         int result;
         if (0 == operationType) {

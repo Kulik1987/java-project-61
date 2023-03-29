@@ -2,9 +2,14 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class EvenGame {
+
+    public static final int MAX_VALUE = 100;
+
     public static boolean startGame(String name) {
-        var firstValue = (int) (Math.random() * 100);
+        var firstValue = ThreadLocalRandom.current().nextInt(0, MAX_VALUE + 1);
         var correctResult = firstValue % 2 == 0 ? "yes" : "no";
         System.out.println("Question: " + firstValue);
         System.out.print("Your choice: ");

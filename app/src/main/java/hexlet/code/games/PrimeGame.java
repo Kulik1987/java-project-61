@@ -2,9 +2,14 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class PrimeGame {
+
+    public static final int MAX_VALUE = 100;
+
     public static boolean startGame(String name) {
-        var number = (int) (Math.random() * 100) + 1;
+        var number = ThreadLocalRandom.current().nextInt(0, MAX_VALUE + 1);
         System.out.println("Question: " + number);
         System.out.print("Your choice: ");
         var answer = Cli.getInputText();
