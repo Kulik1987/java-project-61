@@ -30,7 +30,7 @@ public class Engine {
             Engine.controlGame(name, "4");
         } else if ("5".equals(typeGame)) {
             String name = getBeforeGameMessage();
-            System.out.print("What number is missing in the progression?");
+            System.out.println("What number is missing in the progression?");
             Engine.controlGame(name, "5");
         } else if ("6".equals(typeGame)) {
             String name = getBeforeGameMessage();
