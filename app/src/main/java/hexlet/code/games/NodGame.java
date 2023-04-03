@@ -1,7 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
-
 import java.util.concurrent.ThreadLocalRandom;
 
 public class NodGame {
@@ -13,7 +11,7 @@ public class NodGame {
         var secondValue = ThreadLocalRandom.current().nextInt(0, MAX_VALUE + 1);
         System.out.println(firstValue + " " + secondValue);
 
-       return findNod(firstValue, secondValue);
+        return findNod(firstValue, secondValue);
 
     }
 

@@ -1,7 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
-
 import java.util.concurrent.ThreadLocalRandom;
 
 public class EvenGame {

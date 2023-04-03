@@ -1,7 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
-
 import java.util.concurrent.ThreadLocalRandom;
 
 public class PrimeGame {
@@ -11,8 +9,6 @@ public class PrimeGame {
     public static String startGame() {
         var number = ThreadLocalRandom.current().nextInt(0, MAX_VALUE + 1);
         System.out.println(number);
-
-        var answer = Cli.getInputText();
         var result = isPrimeNumber(number);
         return result ? "no" : "yes";
     }
