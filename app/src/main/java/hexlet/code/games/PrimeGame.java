@@ -8,23 +8,13 @@ public class PrimeGame {
 
     public static final int MAX_VALUE = 100;
 
-    public static boolean startGame(String name) {
+    public static String startGame() {
         var number = ThreadLocalRandom.current().nextInt(0, MAX_VALUE + 1);
-        System.out.println("Question: " + number);
-        System.out.print("Your choice: ");
+        System.out.println(number);
+
         var answer = Cli.getInputText();
         var result = isPrimeNumber(number);
-        var textResult = result ? "no" : "yes";
-        System.out.println();
-        if (answer.equals(textResult)) {
-            System.out.println("Correct!");
-            return true;
-        } else {
-            System.out.println("'" + answer
-                + "' is wrong answer ;(. Correct answer was '" + textResult + "'.");
-            System.out.println("Let's try again, " + name + "!");
-            return false;
-        }
+        return result ? "no" : "yes";
     }
 
     private static boolean isPrimeNumber(int number) {

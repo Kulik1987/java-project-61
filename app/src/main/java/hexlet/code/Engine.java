@@ -43,25 +43,60 @@ public class Engine {
         var count = 0;
         boolean isTrueDecision = true;
         while (count < MAX_COUNT_GAME && isTrueDecision) {
+            System.out.print("Question: ");
             if ("2".equals(typeGame)) {
-                isTrueDecision = EvenGame.startGame(name);
+                String correctResult = EvenGame.startGame();
+                isTrueDecision = resultProcessing(correctResult, name);
                 count++;
             } else if ("3".equals(typeGame)) {
-                isTrueDecision = Calculator.startGame(name);
+                int correctResult = Calculator.startGame();
+                isTrueDecision = resultProcessing(correctResult, name);
                 count++;
             } else if ("4".equals(typeGame)) {
-                isTrueDecision = NodGame.startGame(name);
+                int correctResult = NodGame.startGame();
+                isTrueDecision = resultProcessing(correctResult, name);
                 count++;
             } else if ("5".equals(typeGame)) {
-                isTrueDecision = ArithmeticProgressionGame.startGame(name);
+                int correctResult = ArithmeticProgressionGame.startGame();
+                isTrueDecision = resultProcessing(correctResult, name);
                 count++;
             } else if ("6".equals(typeGame)) {
-                isTrueDecision = PrimeGame.startGame(name);
+                String correcrResult = PrimeGame.startGame();
+                isTrueDecision = resultProcessing(correcrResult, name);
                 count++;
             }
             if (count == MAX_COUNT_GAME) {
                 System.out.println("Congratulations, " + name + "!");
             }
+        }
+    }
+
+    private static boolean resultProcessing(int correctResult, String name) {
+        System.out.println();
+        System.out.print("Your answer: ");
+        var answer = getInputText();
+        if (correctResult == Integer.parseInt(answer)) {
+            System.out.println("Correct!");
+            return true;
+        } else {
+            System.out.println("'" + answer
+                + "' is wrong answer ;(. Correct answer was '" + correctResult + "'.");
+            System.out.println("Let's try again, " + name + "!");
+            return false;
+        }
+    }
+
+    private static boolean resultProcessing(String correctResult, String name) {
+        System.out.print("Your choice: ");
+        var response = Cli.getInputText();
+        if (correctResult.equals(response)) {
+            System.out.println("Correct!");
+            return true;
+        } else {
+            System.out.println("'" + response
+                + "' is wrong answer ;(. Correct answer was '" + correctResult + "'.");
+            System.out.println("Let's try again, " + name + "!");
+            return false;
         }
     }
 
