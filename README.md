@@ -1,12 +1,12 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Kulik1987/java-project-61/workflows/hexlet-check/badge.svg)](https://github.com/Kulik1987/java-project-61/actions)
 
-![](result.jpg)
+![](assets/result.jpg)
 
-![](calc.jpg)
+![](assets/calc.jpg)
 
-![](Nod.jpg)
+![](assets/Nod.jpg)
 
-![](Progressive.jpg)
+![](assets/Progressive.jpg)
 
-![](Prime.jpg)
+![](assets/Prime.jpg)
