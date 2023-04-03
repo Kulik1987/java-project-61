@@ -26,6 +26,6 @@ public class ArithmeticProgressionGame {
                 System.out.print(progressive[i] + " ");
             }
         }
-        return findElement;
+        return progressive[findElement];
     }
 }
