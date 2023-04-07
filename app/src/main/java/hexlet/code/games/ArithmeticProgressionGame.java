@@ -8,12 +8,7 @@ public class ArithmeticProgressionGame {
     public static final int MAX_STEP = 20;
 
     public static int startGame() {
-        int[] progressive = new int[SIZE_ARRAY];
-        progressive[0] = ThreadLocalRandom.current().nextInt(0, MAX_VALUE + 1);
-        var step = ThreadLocalRandom.current().nextInt(1, MAX_STEP + 1);
-        for (int i = 1; i < SIZE_ARRAY; i++) {
-            progressive[i] = progressive[i - 1] + step;
-        }
+        int[] progressive = getProgressive();
         var findElement = ThreadLocalRandom.current().nextInt(0, SIZE_ARRAY);
         for (int i = 1; i < SIZE_ARRAY; i++) {
             if (findElement == i && i != SIZE_ARRAY - 1) {
@@ -27,5 +22,15 @@ public class ArithmeticProgressionGame {
             }
         }
         return progressive[findElement];
+    }
+
+    private static int[] getProgressive() {
+        int[] progressive = new int[SIZE_ARRAY];
+        progressive[0] = ThreadLocalRandom.current().nextInt(0, MAX_VALUE + 1);
+        var step = ThreadLocalRandom.current().nextInt(1, MAX_STEP + 1);
+        for (int i = 1; i < SIZE_ARRAY; i++) {
+            progressive[i] = progressive[i - 1] + step;
+        }
+        return progressive;
     }
 }
