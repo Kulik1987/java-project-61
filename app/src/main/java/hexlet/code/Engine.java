@@ -29,7 +29,7 @@ public class Engine {
         } else if ("4".equals(typeGame)) {
             NodGame.getBeforeGameMessage();
         } else if ("5".equals(typeGame)) {
-           ArithmeticProgressionGame.getBeforeGame();
+            ArithmeticProgressionGame.getBeforeGame();
         } else if ("6".equals(typeGame)) {
             PrimeGame.getBeforeGameMessage();
         }
